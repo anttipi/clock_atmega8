@@ -35,14 +35,14 @@ void    TIMER2_OVF_vect()
 
 void write_TCNT2 (int8_t a)
 {
-    while (ASSR & (1<<TCN2UB)); // ожидание разрешения записи регистра TCNT2
+    while (ASSR & (1<<TCN2UB)); //РѕР¶РёРґР°РЅРёРµ СЂР°Р·СЂРµС€РµРЅРёСЏ Р·Р°РїРёСЃРё СЂРµРіРёСЃС‚СЂР° TCNT2
     TCNT2 = a;
     return;
 }
 
 void write_OCR2 (int8_t b)
 {
-    while (ASSR & (1<<OCR2UB)); // ожидание разрешения записи регистра TCNT2
+    while (ASSR & (1<<OCR2UB));
     OCR2 = b;
     return;
 }
